@@ -1,0 +1,15 @@
+{
+  "name": "cpp-dev-project",
+  "version": "0.1.0",
+  "dependencies": [
+    "abseil",
+    "argparse",
+    "catch2",
+    "fmt",
+    "gtest",
+    "indicators",
+    "magic-enum",
+    "spdlog"
+  ],
+  "builtin-baseline": "d5ec528843d29e3a52d745a64b469f810b2cedbf"
+}

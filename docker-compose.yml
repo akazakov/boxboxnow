@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  cpp-dev:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - .:/workspace:cached
+      - ./.container/authorized_keys:/home/ubuntu/.ssh/authorized_keys
+    command: "/usr/sbin/sshd -D"
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    ports:
+      - "2223:22"
+    environment:
+      - DISPLAY=${DISPLAY}
